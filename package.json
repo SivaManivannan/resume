@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "validate": "ts-node scripts/validate-resume.ts"
+    "validate": "tsx scripts/validate-resume.ts"
   },
   "dependencies": {
     "react": "^19.1.1",
@@ -24,7 +24,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.22",
     "globals": "^16.4.0",
-    "ts-node": "^10.9.2",
+    "tsx": "^4.7.0",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.45.0",
     "vite": "^7.1.7"
