@@ -89,10 +89,14 @@
             }
           ],
           "skills": [
-            { "name": "Deep Neural Networks", "label": "Software Development" },
+            { "name": "Deep Neural Networks", "label": "AI/ML" },
+            { "name": "TensorFlow", "label": "AI/ML" },
+            { "name": "PyTorch", "label": "AI/ML" },
+            { "name": "Keras", "label": "AI/ML" },
+            { "name": "Scikit-learn", "label": "AI/ML" },
             { "name": "Project Management", "label": "Software Development" },
             { "name": "Mentoring", "label": "Software Development" },
-            { "name": "LangChain", "label": "Software Development" },
+            { "name": "LangChain", "label": "AI/ML" },
             { "name": "Python", "label": "Software Development" },
             { "name": "React", "label": "Software Development" },
             { "name": "TypeScript", "label": "Software Development" }
