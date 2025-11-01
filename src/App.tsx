@@ -19,7 +19,8 @@ function App() {
   const [activeTab, setActiveTab] = useState<'work' | 'education' | 'publications'>('work');
 
   useEffect(() => {
-    fetch('/data/resume-data.json')
+    const basePath = import.meta.env.BASE_URL;
+    fetch(`${basePath}data/resume-data.json`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to load resume data');
