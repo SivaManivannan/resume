@@ -36,9 +36,11 @@ function WorkExperience({ workExperience, internships }: WorkExperienceProps) {
                 <div key={role.id} className="role-item">
                   <div className="role-header">
                     <h4 className="role-position">{role.position}</h4>
-                    <span className="role-dates">
-                      {formatDate(role.fromDate)} - {role.toDate ? formatDate(role.toDate) : 'Present'}
-                    </span>
+                    {role.fromDate && (
+                      <span className="role-dates">
+                        {formatDate(role.fromDate)} - {role.toDate ? formatDate(role.toDate) : 'Present'}
+                      </span>
+                    )}
                   </div>
 
                   {role.description && (
@@ -97,9 +99,11 @@ function WorkExperience({ workExperience, internships }: WorkExperienceProps) {
                 <div key={role.id} className="role-item">
                   <div className="role-header">
                     <h4 className="role-position">{role.position}</h4>
-                    <span className="role-dates">
-                      {formatDate(role.fromDate)} - {role.toDate ? formatDate(role.toDate) : 'Present'}
-                    </span>
+                    {role.fromDate && (
+                      <span className="role-dates">
+                        {formatDate(role.fromDate)} - {role.toDate ? formatDate(role.toDate) : 'Present'}
+                      </span>
+                    )}
                   </div>
 
                   {role.description && (

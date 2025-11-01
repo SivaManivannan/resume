@@ -62,7 +62,7 @@
       "id": "work1",
       "company": "KAPPA Engineering",
       "location": "Sophia Antipolis, France",
-      "fromDate": "2023-04",
+      "fromDate": "2019-01",
       "current": true,
       "roles": [
         {
@@ -168,8 +168,6 @@
         {
           "id": "role4",
           "position": "Edison Engineer",
-          "fromDate": "2013-05",
-          "toDate": "2014-05",
           "description": "Rotordynamic analysis of aircraft engines.",
           "highlights": [
             {
@@ -202,8 +200,6 @@
         {
           "id": "role3",
           "position": "Research Intern",
-          "fromDate": "2014-09",
-          "toDate": "2015-06",
           "description": "Master's internship focusing on thermal modeling of underground storage caverns.",
           "highlights": [
             {
@@ -232,8 +228,6 @@
         {
           "id": "role5",
           "position": "Engineering Intern",
-          "fromDate": "2012-05",
-          "toDate": "2012-08",
           "description": "Bachelor's internship focusing on speeding up numerical simulations.",
           "highlights": [
             {

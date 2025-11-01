@@ -33,7 +33,7 @@ export interface Highlight {
 export interface Role {
   id: string;
   position: string;
-  fromDate: string;
+  fromDate?: string;
   toDate?: string;
   description?: string;
   highlights: Highlight[];

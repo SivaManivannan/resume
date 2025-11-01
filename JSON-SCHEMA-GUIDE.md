@@ -102,11 +102,11 @@ Professional experience with nested roles, each containing highlights and skills
 ### Role-Level Required Fields
 - `id` (string): Unique identifier
 - `position` (string): Job title
-- `fromDate` (string): Start date (YYYY-MM)
 - `highlights` (array): List of achievements/responsibilities
 - `skills` (array): Skills used in this role
 
 ### Role-Level Optional Fields
+- `fromDate` (string): Start date (YYYY-MM) - Optional if only one role (dates shown at company level)
 - `toDate` (string): End date (omit if current role)
 - `description` (string): Brief role overview
 
@@ -293,6 +293,7 @@ Defines all possible labels organized by category. These labels should match the
 - Always use `YYYY-MM` (e.g., "2020-06" for June 2020)
 - For current positions, omit `toDate` and set `current: true`
 - Company dates should span all role dates
+- For single-role positions, dates can be omitted at role level to avoid duplication
 
 ### 3. Label Consistency
 - Use exact same spelling and capitalization
@@ -365,6 +366,35 @@ Defines all possible labels organized by category. These labels should match the
         { "position": "Engineer", "fromDate": "2010-01", "toDate": "2015-06" },
         { "position": "Senior Engineer", "fromDate": "2015-07", "toDate": "2020-03" },
         { "position": "Principal Engineer", "fromDate": "2020-04", "toDate": "2023-12" }
+      ]
+    }
+  ]
+}
+```
+
+### Single Role Position
+When there's only one role, omit dates at role level to avoid duplication:
+```json
+{
+  "workExperience": [
+    {
+      "company": "SmallCorp",
+      "fromDate": "2018-03",
+      "toDate": "2020-05",
+      "current": false,
+      "roles": [
+        {
+          "id": "role1",
+          "position": "Software Engineer",
+          "description": "Full-stack development",
+          "highlights": [
+            { "text": "Built microservices architecture", "labels": ["Software Development"] }
+          ],
+          "skills": [
+            { "name": "React", "label": "Software Development" },
+            { "name": "Node.js", "label": "Software Development" }
+          ]
+        }
       ]
     }
   ]

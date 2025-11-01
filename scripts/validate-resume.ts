@@ -40,7 +40,7 @@ interface Highlight {
 interface Role {
   id: string;
   position: string;
-  fromDate: string;
+  fromDate?: string;
   toDate?: string;
   description?: string;
   highlights: Highlight[];
@@ -179,7 +179,7 @@ function validateWorkExperience(work: unknown, index: number): void {
 
 function validateRole(role: unknown, workIndex: number, roleIndex: number): void {
   const r = role as Record<string, unknown>;
-  const required = ['id', 'position', 'fromDate', 'highlights', 'skills'];
+  const required = ['id', 'position', 'highlights', 'skills'];
   
   for (const field of required) {
     if (!r[field]) {
