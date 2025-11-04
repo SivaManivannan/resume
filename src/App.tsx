@@ -46,13 +46,16 @@ function App() {
     // Add skills from work experience
     resumeData.workExperience.forEach(exp => {
       exp.roles.forEach(role => {
+        const fromDate = role.fromDate;
+        if (!fromDate) return; // Skip roles without dates
+        const toDate = role.toDate;
         role.skills.forEach(skill => {
           const existing = skillsMap.get(skill.name);
-          if (!existing || role.fromDate < existing.fromDate) {
+          if (!existing || fromDate < existing.fromDate) {
             skillsMap.set(skill.name, {
               ...skill,
-              fromDate: role.fromDate,
-              toDate: role.toDate,
+              fromDate,
+              toDate,
             });
           }
         });
@@ -62,13 +65,16 @@ function App() {
     // Add skills from internships
     resumeData.internships.forEach(intern => {
       intern.roles.forEach(role => {
+        const fromDate = role.fromDate;
+        if (!fromDate) return; // Skip roles without dates
+        const toDate = role.toDate;
         role.skills.forEach(skill => {
           const existing = skillsMap.get(skill.name);
-          if (!existing || role.fromDate < existing.fromDate) {
+          if (!existing || fromDate < existing.fromDate) {
             skillsMap.set(skill.name, {
               ...skill,
-              fromDate: role.fromDate,
-              toDate: role.toDate,
+              fromDate,
+              toDate,
             });
           }
         });
